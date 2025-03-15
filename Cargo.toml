@@ -1,0 +1,19 @@
+[package]
+name = "hunspell"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["lib" ,"cdylib"]
+
+[dependencies]
+anyrun-plugin = { git = "https://github.com/anyrun-org/anyrun" }
+abi_stable = "0.11.1"
+serde = { version = "1.0.218", features = ["derive"] }
+ron = "0.8.1"
+
+[dev-dependencies]
+clap = { version = "4.5.32", features = ["derive"] }
+
+[[example]]
+name = "default_config"
